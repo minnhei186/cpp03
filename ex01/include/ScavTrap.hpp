@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hosokawa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/13 09:47:53 by hosokawa          #+#    #+#             */
-/*   Updated: 2024/12/13 16:00:33 by hosokawa         ###   ########.fr       */
+/*   Created: 2024/12/13 12:39:31 by hosokawa          #+#    #+#             */
+/*   Updated: 2024/12/13 15:57:31 by hosokawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
-int main(void)
+class ScavTrap : public ClapTrap
 {
-	ScavTrap mob1("mob1");
+	public:
+		ScavTrap(std::string newName);
+		ScavTrap(const ScavTrap& origin);
+		ScavTrap& operator=(const ScavTrap& origin);
+		~ScavTrap();
 
-	mob1.attack("zombie");
-	mob1.guardGate();
-	
-	return EXIT_SUCCESS;
-}
+		void guardGate();
+
+};
 
 
