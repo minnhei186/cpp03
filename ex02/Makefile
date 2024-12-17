@@ -4,7 +4,7 @@ CXXVER=-std=c++98
 SRCS=$(wildcard src/*.cpp)
 OBJS=$(SRCS:.cpp=.o)
 INC=-Iinclude
-NAME=Serena!
+NAME=Repeat
 
 all:$(NAME)
 
